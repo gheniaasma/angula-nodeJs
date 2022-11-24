@@ -1,0 +1,84 @@
+<p>demande-credit works!</p>
+<img src="../../assets/front/images/demande.jpg">
+<form #f="ngForm">
+  <div class="form-group col-md-6" >
+
+    <label>idCredit</label>
+    <input type="number"  minlength="3"  required ngModel #idCredit="ngModel"  name ="ref" class="form-control" >
+    <div class="alert alert-danger" *ngIf="idCredit.invalid &&idCredit.touched">
+      <p *ngIf="idCredit.hasError('required')">this field is required</p>
+      <p *ngIf="idCredit.hasError('minlength')">minlength is equal ton 3</p>
+    </div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label> situation_professionnelle</label>
+    <input type="text" required  ngModel  #situation_professionnelle="ngModel"  name ="titre" class="form-control">
+
+    <div class="alert alert-danger" *ngIf="situation_professionnelle.invalid &&situation_professionnelle.touched">
+      <p *ngIf="situation_professionnelle.hasError('required')">this field is required</p>
+    </div></div>
+
+  <div class="form-group col-md-6">
+    <label>  Revenu_mensuel </label>
+    <input type="text" required ngModel #Revenu_mensuel="ngModel" minlength="3" name ="description" class="form-control">
+    <div class="alert alert-danger" *ngIf="Revenu_mensuel.invalid && Revenu_mensuel.touched">
+      <p *ngIf="Revenu_mensuel.hasError('required')">this field is required</p>
+      <p *ngIf="Revenu_mensuel.hasError('minlength')"> minlenght svp</p>
+    </div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label>Montant </label>
+    <input type="text" required ngModel #Montant="ngModel" name ="cin " class="form-control">
+
+    <div class="alert alert-danger" *ngIf="Montant.invalid && Montant.touched">
+      <p *ngIf="Montant.hasError('required')">this field is required</p></div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label>statut </label>
+    <input type="text" required ngModel #statut="ngModel" name ="cin " class="form-control">
+
+    <div class="alert alert-danger" *ngIf="statut.invalid && statut.touched">
+      <p *ngIf="statut.hasError('required')">this field is required</p></div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label>date</label>
+    <input type="text" required ngModel #date="ngModel" name ="cin " class="form-control">
+
+    <div class="alert alert-danger" *ngIf="date.invalid && date.touched">
+      <p *ngIf="date.hasError('required')">this field is required</p></div>
+  </div>
+  <div class="form-group col-md-6">
+    <label>type </label>
+    <input type="text" required ngModel #type="ngModel" name ="cin " class="form-control">
+
+    <div class="alert alert-danger" *ngIf="type.invalid && type.touched">
+      <p *ngIf="type.hasError('required')">this field is required</p></div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label>periode_renbourcement</label>
+    <input type="text" required ngModel #periode_renbourcement="ngModel" name ="cin " class="form-control">
+
+    <div class="alert alert-danger" *ngIf="periode_renbourcement.invalid && periode_renbourcement.touched">
+      <p *ngIf="periode_renbourcement.hasError('required')">this field is required</p></div>
+  </div>
+  <button>Envoyer</button>
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
